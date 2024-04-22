@@ -1,1 +1,1 @@
-export { default } from './FinanceWidget'
+export {default} from './FinanceWidget';

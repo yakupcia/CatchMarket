@@ -1,3 +1,4 @@
+//React and React Native
 import {
   Text,
   SafeAreaView,
@@ -7,9 +8,13 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import React from 'react';
-import styles from './SettingsPage.style';
-import { SaveButton, SettingsItem } from '../../../components';
+
+//3th party
 import ActionSheet from 'react-native-actions-sheet';
+import {SaveButton, SettingsItem} from '../../../components';
+//styles
+import styles from './SettingsPage.style';
+
 const SettingsPage = () => {
   const ref = React.useRef();
 
@@ -86,11 +91,11 @@ const SettingsPage = () => {
     },
   ];
 
-  const renderItem = ({ item }) => <SettingsItem item={item} />;
+  const renderItem = ({item}) => <SettingsItem item={item} />;
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={{ padding: 20 }}>
+      <View style={{padding: 20}}>
         <View style={styles.headerContainer}>
           <Image
             source={{

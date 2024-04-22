@@ -1,3 +1,3 @@
 import FinanceWidget from './FinanceWidget';
 
-export { FinanceWidget }
+export {FinanceWidget};

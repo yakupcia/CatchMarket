@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 import radius from '../../../styles/radius';
 
 const styles = StyleSheet.create({
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: radius.full,
-  }
+  },
 });
 
 export default styles;

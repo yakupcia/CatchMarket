@@ -1,8 +1,11 @@
-import { View, Text, TouchableOpacity, FlatList, Image } from 'react-native';
+import {View, Text, TouchableOpacity, FlatList, Image} from 'react-native';
 import React from 'react';
+
+import {Icon} from '../../../../../components';
+import {colors} from '../../../../../styles';
+
+//styles
 import styles from './FinanceWidget.style';
-import { Icon } from '../../../../../components';
-import { colors } from '../../../../../styles';
 
 const FinanceWidget = () => {
   const [active, setActive] = React.useState(false);
@@ -11,9 +14,13 @@ const FinanceWidget = () => {
     setActive(!active);
   };
 
-  const IMAGES = [require('../../../../../assets/images/home1.png'), require('../../../../../assets/images/home2.png'), require('../../../../../assets/images/home3.png')];
+  const IMAGES = [
+    require('../../../../../assets/images/home1.png'),
+    require('../../../../../assets/images/home2.png'),
+    require('../../../../../assets/images/home3.png'),
+  ];
 
-  const renderPhoto = ({ item }) => <Image source={item} style={styles.image} />;
+  const renderPhoto = ({item}) => <Image source={item} style={styles.image} />;
 
   return (
     <View style={styles.container}>
@@ -41,7 +48,12 @@ const FinanceWidget = () => {
           </View>
         </TouchableOpacity>
       </View>
-      <FlatList data={IMAGES} renderItem={renderPhoto} horizontal showsHorizontalScrollIndicator={false} />
+      <FlatList
+        data={IMAGES}
+        renderItem={renderPhoto}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+      />
     </View>
   );
 };

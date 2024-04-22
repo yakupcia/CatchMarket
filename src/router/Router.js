@@ -1,14 +1,12 @@
 //React and React Native
-import React, {useRef} from 'react';
-import {View, Text, Button, TouchableOpacity} from 'react-native';
+import React from 'react';
 
 //3th party
-import ActionSheet from 'react-native-actions-sheet';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 
 //pages
-import {MapScreen, Notifications, SettingsPage, Splash} from '../pages';
+import {MapScreen, SettingsPage, Splash} from '../pages';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,7 +29,11 @@ function App() {
           component={SettingsPage}
           options={{headerShown: false}}
         />
-        <Stack.Screen name="Notifications" component={Notifications} />
+        {/* <Stack.Screen
+          name="Notifications"
+          component={null}
+          options={{headerShown: false}}
+        /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
