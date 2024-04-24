@@ -11,11 +11,13 @@ import React from 'react';
 
 //3th party
 import ActionSheet from 'react-native-actions-sheet';
-import {SaveButton, SettingsItem} from '../../../components';
+
+//components
+import {GoBack, SaveButton, SettingsItem} from '../../../components';
 //styles
 import styles from './SettingsPage.style';
 
-const SettingsPage = () => {
+const SettingsPage = ({navigation}) => {
   const ref = React.useRef();
 
   const [lang, setLang] = React.useState('en');
@@ -111,6 +113,8 @@ const SettingsPage = () => {
       </View>
 
       <FlatList data={DATA} renderItem={renderItem} />
+
+      <GoBack navigation={navigation} />
 
       <ActionSheet ref={ref} containerStyle={styles.actionContainer}>
         <Text style={styles.title}>Language</Text>

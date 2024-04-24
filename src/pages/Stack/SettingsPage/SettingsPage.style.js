@@ -1,8 +1,8 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 import radius from '../../../styles/radius';
 import margin from '../../../styles/margin';
 import padding from '../../../styles/padding';
-import { colors } from '../../../styles';
+import {colors} from '../../../styles';
 
 const styles = StyleSheet.create({
   container: {
